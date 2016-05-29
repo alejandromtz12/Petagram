@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:transitionGroup="false">
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:src="@drawable/fondoanimal"
+        android:scaleType="centerCrop"  />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:background="@drawable/fondoletra"
+
+        >
+
+
+        <ImageButton
+            android:id="@+id/btdislike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/bone2"
+            android:layout_marginLeft="@dimen/left"
+            android:layout_gravity="center"
+
+            />
+
+        <TextView
+            android:id="@+id/tvnombre"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_marginLeft= "@dimen/left"
+            android:textColor="@color/colorWhite"
+            android:layout_gravity="center"
+            android:gravity="center"
+
+            />
+
+        <ImageButton
+            android:id="@+id/btlike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/bone"
+            android:layout_marginLeft="@dimen/left"
+            android:layout_gravity="center_vertical"
+            />
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <ImageView
+            android:id="@+id/iv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/mascota1"
+            />
+
+
+    </RelativeLayout>
+
+
+
+</FrameLayout>
