@@ -1,5 +1,19 @@
 <resources>
     <string name="app_name">Petagram</string>
     <string name="top">Ranking Animales</string>
+    <string name="contacto">Contacto</string>
+    <string name="acerca_de">Acerca de</string>
+    <string name="bt_comentario">Enviar Comentario</string>
+    <string name="nombre">Escribe tu nombre:</string>
+    <string name="email">E-mail:</string>
+    <string name="mensaje">Escribe tu mensaje:</string>
+    <string name="enviar">Enviar</string>
+    <string name="bio">Bio...</string>
+    <string name="acerca_de_mi">Alejandro Martinez, Ingeniero en Informática. 25 años de edad.
+    Vive actualmente en el estado de México. Le gusta la programacion en aplicaciones moviles.</string>
+    <string name="mi_mascota">Perrito Roco</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

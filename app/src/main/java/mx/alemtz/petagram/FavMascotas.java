@@ -5,9 +5,10 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuInflater;
+
 import java.util.ArrayList;
+
+import mx.alemtz.petagram.adapter.TopAdapter;
 
 public class FavMascotas extends AppCompatActivity {
 
@@ -26,7 +27,8 @@ public class FavMascotas extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         //define icono izquierdo de back
-        actionbar.setNavigationIcon(R.mipmap.footprint);
+        actionbar.setLogo(R.mipmap.footprint);
+        actionbar.setTitle(R.string.top);
 
         //pasar arraylist
         LlenadoMascotas();
