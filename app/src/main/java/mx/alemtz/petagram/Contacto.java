@@ -13,7 +13,6 @@ import java.util.concurrent.ExecutionException;
 
 public class Contacto extends AppCompatActivity {
     private TextInputEditText nombre,email, mensaje;
-    private String snombre,semail,smensaje;
     private Button enviar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +35,9 @@ public class Contacto extends AppCompatActivity {
         try {
             Object ob = emails.get();
             if (ob != null) {
-                Toast.makeText(this,"mensaje enviado",Toast.LENGTH_SHORT);
+                Snackbar.make(v,ob.toString(),Snackbar.LENGTH_LONG).show();
+            }else{
+                Snackbar.make(v,"Mensaje no enviado",Snackbar.LENGTH_LONG).show();
             }
         } catch (InterruptedException e) {
             e.printStackTrace();

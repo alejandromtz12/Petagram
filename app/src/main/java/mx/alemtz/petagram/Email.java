@@ -59,7 +59,7 @@ public class Email extends AsyncTask<Object, Object, Object> {
             message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
 
             // Set Subject: header field
-            message.setSubject("PETAGRAM");
+            message.setSubject("  ");
 
             // Now set the actual message
             message.setText(mensaje);
