@@ -1,11 +1,15 @@
 package mx.alemtz.petagram;
 
 import android.support.design.widget.BottomSheetBehavior;
+import android.support.design.widget.Snackbar;
 import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
+
+import java.util.concurrent.ExecutionException;
 
 public class Contacto extends AppCompatActivity {
     private TextInputEditText nombre,email, mensaje;
@@ -25,14 +29,20 @@ public class Contacto extends AppCompatActivity {
 
 
     public void EnviarEmail (View v){
-        enviar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                snombre = nombre.getText().toString();
-                semail = email.getText().toString();
-                smensaje= mensaje.getText().toString();
+
+        Email emails = new Email();
+        emails.execute(email.getText().toString(), mensaje.getText().toString());
+
+        try {
+            Object ob = emails.get();
+            if (ob != null) {
+                Toast.makeText(this,"mensaje enviado",Toast.LENGTH_SHORT);
             }
-        });
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
 
     }
 
