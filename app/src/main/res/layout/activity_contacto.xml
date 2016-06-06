@@ -60,7 +60,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/enviar"
-            android:theme="@style/DisenoBotones" />
+            android:theme="@style/DisenoBotones"
+            android:onClick="EnviarEmail"/>
 
     </LinearLayout>
 </ScrollView>
