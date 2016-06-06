@@ -14,7 +14,6 @@ import java.util.concurrent.ExecutionException;
 
 public class Contacto extends AppCompatActivity {
 
-    private static final String TAG = Contacto.class.getName();
     private EditText nombre,email, mensaje;
     private Button enviar;
     @Override
