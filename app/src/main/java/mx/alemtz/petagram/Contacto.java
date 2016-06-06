@@ -7,21 +7,24 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import java.util.concurrent.ExecutionException;
 
 public class Contacto extends AppCompatActivity {
-    private TextInputEditText nombre,email, mensaje;
+
+    private static final String TAG = Contacto.class.getName();
+    private EditText nombre,email, mensaje;
     private Button enviar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contacto);
 
-        nombre = (TextInputEditText) findViewById(R.id.txinombre);
-        email = (TextInputEditText) findViewById(R.id.txiemail);
-        mensaje = (TextInputEditText) findViewById(R.id.tximensaje);
+        nombre = (EditText) findViewById(R.id.txinombre);
+        email = (EditText) findViewById(R.id.txiemail);
+        mensaje = (EditText) findViewById(R.id.tximensaje);
         enviar = (Button) findViewById(R.id.btenviar);
 
     }
