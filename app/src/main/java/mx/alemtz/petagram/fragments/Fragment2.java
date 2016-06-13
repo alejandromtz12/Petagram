@@ -52,7 +52,7 @@ public class Fragment2 extends Fragment {
     }
 
     public void startAdapter (){
-        Adapter adaptador = new Adapter(mascota);
+        Adapter adaptador = new Adapter(mascota , getActivity());
         rvfrac2.setAdapter(adaptador);
     }
 

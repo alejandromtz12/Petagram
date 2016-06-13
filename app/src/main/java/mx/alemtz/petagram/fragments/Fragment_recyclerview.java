@@ -45,7 +45,7 @@ public class Fragment_recyclerview extends Fragment implements IRecyclerViewFrag
 
     @Override
     public Adapter crearAdaptador(ArrayList<Mascota> mascotas) {
-        Adapter adaptador= new Adapter(mascotas); //creamos objeto de la clase llamada adaptar y pasamos el Arraylist mascotas
+        Adapter adaptador= new Adapter(mascotas, getActivity()); //creamos objeto de la clase llamada adaptar y pasamos el Arraylist mascotas
 
         return adaptador;
     }

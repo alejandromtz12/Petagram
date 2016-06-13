@@ -83,7 +83,6 @@ public class BaseDatos extends SQLiteOpenHelper {
     public void insertarLike (ContentValues contentValues){
         Log.e("-------------------", "3333333333333333333333333Mensaje de like33333333333333333333333");
         SQLiteDatabase db = this.getWritableDatabase();
-        Log.e("-------------------", "4444444444444444444444444444Mensaje de like4444444444444444444");
         db.insert(ConstanteBaseDatos.TABLE_LIKES, null, contentValues);
         db.close();
     }

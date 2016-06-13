@@ -1,6 +1,7 @@
 package mx.alemtz.petagram.adapter;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -28,9 +29,7 @@ public class Adapter extends RecyclerView.Adapter <Adapter.MascotaViewHolder>{
     ArrayList<Mascota> mascotas;
     Activity activity;
 
-    public Adapter (ArrayList <Mascota> mascotas ){
-        this.mascotas=mascotas;
-    }
+
 
     public Adapter (ArrayList <Mascota> mascotas, Activity activity){
         this.mascotas=mascotas;
@@ -51,6 +50,9 @@ public class Adapter extends RecyclerView.Adapter <Adapter.MascotaViewHolder>{
         MascotaViewHolder.iv1.setImageResource(mascota.getImagen());
         MascotaViewHolder.nombreM.setText(mascota.getNombre());
         MascotaViewHolder.tvlikes.setText(String.valueOf(mascota.getLikes()) );
+
+
+
 
         MascotaViewHolder.ivlike.setOnClickListener(new View.OnClickListener() {
             @Override
