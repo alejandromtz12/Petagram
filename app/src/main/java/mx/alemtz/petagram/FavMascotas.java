@@ -9,6 +9,7 @@ import android.support.v7.widget.Toolbar;
 import java.util.ArrayList;
 
 import mx.alemtz.petagram.adapter.TopAdapter;
+import mx.alemtz.petagram.pojo.Mascota;
 
 public class FavMascotas extends AppCompatActivity {
 

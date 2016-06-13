@@ -8,7 +8,7 @@ import android.widget.ImageView;
 
 import java.util.ArrayList;
 
-import mx.alemtz.petagram.Mascota;
+import mx.alemtz.petagram.pojo.Mascota;
 import mx.alemtz.petagram.R;
 
 

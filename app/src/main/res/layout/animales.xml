@@ -21,7 +21,7 @@
 
 
         <ImageButton
-            android:id="@+id/btdislike"
+            android:id="@+id/ivlike"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@mipmap/bone2"
@@ -43,12 +43,24 @@
             />
 
         <ImageButton
-            android:id="@+id/btlike"
+            android:id="@+id/ivloglike"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@mipmap/bone"
             android:layout_marginLeft="@dimen/left"
             android:layout_gravity="center_vertical"
+            />
+
+        <TextView
+            android:id="@+id/tvlikes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/likes"
+            android:textSize="20dp"
+            android:textColor="@color/colorWhite"
+            android:layout_marginLeft="@dimen/left"
+            android:layout_marginRight="@dimen/left"
             />
 
     </LinearLayout>

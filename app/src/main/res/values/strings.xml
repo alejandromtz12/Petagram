@@ -12,6 +12,7 @@
     <string name="acerca_de_mi">Alejandro Martinez, Ingeniero en Informática. 25 años de edad.
     Vive actualmente en el estado de México. Le gusta la programacion en aplicaciones moviles.</string>
     <string name="mi_mascota">Perrito Roco</string>
+    <string name="likes">0</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

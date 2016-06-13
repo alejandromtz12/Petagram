@@ -10,51 +10,50 @@ import android.view.ViewGroup;
 
 import java.util.ArrayList;
 
-import mx.alemtz.petagram.Mascota;
+import mx.alemtz.petagram.pojo.Mascota;
 import mx.alemtz.petagram.R;
 import mx.alemtz.petagram.adapter.Adapter;
+import mx.alemtz.petagram.presentador.IRecyclerViewFragmentPresenter;
+import mx.alemtz.petagram.presentador.RecyclerViewFragmentPresenter;
 
 
-public class Fragment_recyclerview extends Fragment {
+public class Fragment_recyclerview extends Fragment implements IRecyclerViewFragment {
     private ArrayList<Mascota> mascotas = new ArrayList<Mascota>();
     private RecyclerView listaMascotas;
+    private IRecyclerViewFragmentPresenter presenter;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_fragment_recyclerview, container, false);
-
-        //recyclerView
         listaMascotas = (RecyclerView) v.findViewById(R.id.rv1);
-        LlenadoMascotas();
-        LinearLayoutManager llm = new LinearLayoutManager(getActivity());
-        llm.setOrientation(LinearLayoutManager.VERTICAL);
-        listaMascotas.setLayoutManager(llm);
-        startAdapter();
+
+        presenter = new RecyclerViewFragmentPresenter (this, getContext());
+
         return v;
     }
 
 
-    public void startAdapter (){
+
+    @Override
+    public void generarLinearLayoutVertical() {
+
+        LinearLayoutManager llm = new LinearLayoutManager(getActivity());
+        llm.setOrientation(LinearLayoutManager.VERTICAL);
+        listaMascotas.setLayoutManager(llm);
+
+    }
+
+    @Override
+    public Adapter crearAdaptador(ArrayList<Mascota> mascotas) {
         Adapter adaptador= new Adapter(mascotas); //creamos objeto de la clase llamada adaptar y pasamos el Arraylist mascotas
+
+        return adaptador;
+    }
+
+    @Override
+    public void inicializarAdaptador(Adapter adaptador) {
         listaMascotas.setAdapter(adaptador); // del RecyclerView pasamos nuestro adaptador a la clase Adaptador
     }
 
-
-
-
-    public void LlenadoMascotas (){
-
-        Mascota mascota1 = new Mascota(R.drawable.mascota1,"Gatito Pelusa");
-        Mascota mascota2 = new Mascota(R.drawable.mascota2,"Perrito Roco");
-        Mascota mascota3 = new Mascota(R.drawable.mascota3, "Hamster Chocolate");
-        Mascota mascota4 = new Mascota(R.drawable.mascota4, "PuercoEspin Mickey");
-        Mascota mascota5 = new Mascota(R.drawable.mascota5, "Conejo Alicia");
-
-        mascotas.add(mascota1);
-        mascotas.add(mascota2);
-        mascotas.add(mascota3);
-        mascotas.add(mascota4);
-        mascotas.add(mascota5);
-    }
 
 }

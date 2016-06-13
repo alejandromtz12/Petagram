@@ -1,5 +1,6 @@
 package mx.alemtz.petagram;
 
+import android.database.Cursor;
 import android.support.design.widget.BottomSheetBehavior;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TextInputEditText;
@@ -12,10 +13,14 @@ import android.widget.Toast;
 
 import java.util.concurrent.ExecutionException;
 
+import mx.alemtz.petagram.Email;
+import mx.alemtz.petagram.R;
+
 public class Contacto extends AppCompatActivity {
 
     private EditText nombre,email, mensaje;
     private Button enviar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,5 +53,6 @@ public class Contacto extends AppCompatActivity {
         }
 
     }
+
 
 }
